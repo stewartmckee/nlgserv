@@ -24,3 +24,72 @@ Build status
 
 [![Build Status](https://travis-ci.org/mnestis/nlgserv.svg?branch=master)](https://travis-ci.org/mnestis/nlgserv)
 [![Latest Version](https://img.shields.io/pypi/v/nlgserv.svg)](https://pypi.python.org/pypi/nlgserv/)
+
+#### Steps in starting the nlg server on localhost: 
+
+1.  Install nlgserv package in local python environment using the command :
+    ```python
+    pip install nlgserv
+    ```
+
+2.  Type the following commands in the shell to start the nlg server : <br>
+    ```python
+    import nlgserv
+    s = nlgserv.start_server("localhost",8000)
+
+    ```
+    
+    To get the following output: <br>
+    Starting nlgserv on localhost:8000 <br>
+    <subprocess.Popen object at 0x7fdc6e008290>
+
+    Now the nlg server has started on localhost:8000
+    
+    In order to run simpleNLG on this server, a POST request should be sent to the server. The request should be in a proper     Json format :
+    
+    For example
+    ```python
+      {  
+         "sentence":
+        {  
+            "subject":"John",
+            "verb":"like",
+            "object":
+            {  
+               "type":"coordinated_phrase",
+               "coordinates":
+               [  
+                  "apples",
+                  "oranges"
+               ]
+            },
+            "modifiers":
+            [  
+               "very much"
+            ],
+            "indirect_object":"",
+            "features":
+            {  
+               "tense":"present"
+            }
+         }
+      }
+    ```
+    Note that the keys are the different components of the sentence we want to construct. 
+    
+    The above Json request will get you the following response :
+    ```
+    John likes apples and oranges very much.
+    ```
+
+    To test the response, you can use the RESTED app in Firefox. <br> 
+    Send a post request to http://localhost:8000/generateSentence <br>
+    The headers will contain the following : <br>
+    Name : content-type <br>
+    Value : application/json <br>
+    
+    <kbd>![normal](https://raw.githubusercontent.com/deeshashah/deeshashah.github.io/master/screenshots/one.png)</kbd>
+    <br>
+    <br>
+    Adding the Json data in the body and getting a response:
+    <kbd>![normal](https://raw.githubusercontent.com/deeshashah/deeshashah.github.io/master/screenshots/two.png)</kbd>
