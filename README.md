@@ -19,11 +19,6 @@ Additionally, it uses Bottle v0.12.9 (under the [MIT licence](https://github.com
 > Thanks,
 > Darren
 
-Build status
-------------
-
-[![Build Status](https://travis-ci.org/mnestis/nlgserv.svg?branch=master)](https://travis-ci.org/mnestis/nlgserv)
-[![Latest Version](https://img.shields.io/pypi/v/nlgserv.svg)](https://pypi.python.org/pypi/nlgserv/)
 
 #### Steps in starting the nlg server on localhost: 
 
@@ -31,6 +26,7 @@ Build status
     ```python
     pip install nlgserv
     ```
+    Or you can even download the repo, extract it and use `python setup.py install`
 
 2.  Type the following commands in the shell to start the nlg server : <br>
     ```python
@@ -40,15 +36,17 @@ Build status
     ```
     
     To get the following output: <br>
+    ```
     Starting nlgserv on localhost:8000 <br>
     <subprocess.Popen object at 0x7fdc6e008290>
-
+    ```
+    
     Now the nlg server has started on localhost:8000
     
     In order to run simpleNLG on this server, a POST request should be sent to the server. The request should be in a proper     Json format :
     
     For example
-    ```python
+    ```JSON
       {  
          "sentence":
         {  
@@ -82,7 +80,7 @@ Build status
     John likes apples and oranges very much.
     ```
 
-    To test the response, you can use the RESTED app in Firefox. <br> 
+    To test the response, you can use the RESTED extention in Firefox. (You can even use Postman) <br> 
     Send a post request to http://localhost:8000/generateSentence <br>
     The headers will contain the following : <br>
     Name : content-type <br>
@@ -93,3 +91,10 @@ Build status
     <br>
     Adding the Json data in the body and getting a response:
     <kbd>![normal](https://raw.githubusercontent.com/deeshashah/deeshashah.github.io/master/screenshots/two.png)</kbd>
+
+
+Build status
+------------
+
+[![Build Status](https://travis-ci.org/mnestis/nlgserv.svg?branch=master)](https://travis-ci.org/mnestis/nlgserv)
+[![Latest Version](https://img.shields.io/pypi/v/nlgserv.svg)](https://pypi.python.org/pypi/nlgserv/)
