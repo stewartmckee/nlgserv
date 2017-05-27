@@ -31,7 +31,7 @@ Additionally, it uses Bottle v0.12.9 (under the [MIT licence](https://github.com
 2.  Type the following commands in the shell to start the nlg server : <br>
     ```python
     import nlgserv
-    s = nlgserv.start_server("localhost",8000)
+    s = nlgserv.start_server("localhost",8000) # You can change the host and port here, use it same throughout
 
     ```
     
