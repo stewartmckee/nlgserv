@@ -86,11 +86,11 @@ Additionally, it uses Bottle v0.12.9 (under the [MIT licence](https://github.com
     Name : content-type <br>
     Value : application/json <br>
     
-    <kbd>![normal](https://raw.githubusercontent.com/deeshashah/deeshashah.github.io/master/screenshots/one.png)</kbd>
+    <kbd>![normal](https://raw.githubusercontent.com/mnestis/nlgserv/b1444950e30880d93c0445a8d2396b01dca276e2/screenshots/one.png)</kbd>
     <br>
     <br>
     Adding the Json data in the body and getting a response:
-    <kbd>![normal](https://raw.githubusercontent.com/deeshashah/deeshashah.github.io/master/screenshots/two.png)</kbd>
+    <kbd>![normal](https://raw.githubusercontent.com/mnestis/nlgserv/b1444950e30880d93c0445a8d2396b01dca276e2/screenshots/two.png)</kbd>
 
 
 Build status
