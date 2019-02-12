@@ -93,6 +93,17 @@ Additionally, it uses Bottle v0.12.9 (under the [MIT licence](https://github.com
     <kbd>![normal](https://raw.githubusercontent.com/mnestis/nlgserv/b1444950e30880d93c0445a8d2396b01dca276e2/screenshots/two.png)</kbd>
 
 
+#### Running the docker image
+
+Running as a docker container 
+
+    docker run -ti -p 8000:8000 stewartmckee/simple_nlg
+
+And if you want to deamonize:
+
+    docker run -d -p 8000:8000 stewartmckee/simple_nlg
+
+
 Build status
 ------------
 

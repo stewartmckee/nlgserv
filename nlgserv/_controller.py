@@ -2,7 +2,7 @@ from subprocess import Popen, PIPE
 from signal import SIGTERM
 import os
 
-def start_server(host, port, output=None, error=None):
+def start_server(host, port, output=None, error=None, block=False):
     """
     Because of the way this function works, if it called, and you lose the object,
     or you don't call stop_server, the spawned process will become a zombie.
@@ -24,7 +24,9 @@ def start_server(host, port, output=None, error=None):
                             stdout=output,
                             stderr=error,
                             preexec_fn=os.setsid)
-    
+    if block:
+        server_instance.wait()
+
     return server_instance
 
 def stop_server(server_instance):
